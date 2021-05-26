@@ -4,6 +4,6 @@ export interface Action {
     payload?: any;
 }
 
-// export interface Reducer<T>{
-//     ( state: T, action: Action ): T
-// }
+export interface Reducer<T>{
+    ( state: T, action: Action ): T
+}
