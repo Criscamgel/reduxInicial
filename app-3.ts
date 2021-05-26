@@ -1,3 +1,4 @@
+import { decrementadorAction } from './contador/contador.actions';
 import { contadorReducer } from './contador/contador.reducer';
 import { Reducer } from "./ngrx-fake/ngrx";
 //T: Tipo genérico
@@ -23,4 +24,5 @@ const store = new Store( contadorReducer, 10 );
 
 
 store.dispatch( incrementadorAction );
+store.dispatch( decrementadorAction );
 console.log( store.getState() );
