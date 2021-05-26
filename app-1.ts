@@ -16,6 +16,9 @@ function reducer(state = 10, action: Action) {
 
     case 'MULTIPLICAR':
       return (state *= action.payload);
+
+    case 'DIVIDIR':
+        return (state /= action.payload);
     default:
       return state;
   }
@@ -37,6 +40,12 @@ const multiplicarAction: Action = {
   payload: 2
 };
 
+const dividirAction: Action = {
+  type: 'DIVIDIR',
+  payload: 2
+};
+
 console.log(reducer(10, incrementadorAction));
 console.log(reducer(10, decrementadorAction));
 console.log(reducer(6, multiplicarAction));
+console.log(reducer(13, dividirAction));
